@@ -1,0 +1,7 @@
+c:\users\lethe\source\repos\BasicBlackJack\BasicBlackJack\bin\Debug\BasicBlackJack.exe.config
+c:\users\lethe\source\repos\BasicBlackJack\BasicBlackJack\bin\Debug\BasicBlackJack.exe
+c:\users\lethe\source\repos\BasicBlackJack\BasicBlackJack\bin\Debug\BasicBlackJack.pdb
+c:\users\lethe\source\repos\BasicBlackJack\BasicBlackJack\obj\Debug\BasicBlackJack.csprojAssemblyReference.cache
+c:\users\lethe\source\repos\BasicBlackJack\BasicBlackJack\obj\Debug\BasicBlackJack.csproj.CoreCompileInputs.cache
+c:\users\lethe\source\repos\BasicBlackJack\BasicBlackJack\obj\Debug\BasicBlackJack.exe
+c:\users\lethe\source\repos\BasicBlackJack\BasicBlackJack\obj\Debug\BasicBlackJack.pdb
