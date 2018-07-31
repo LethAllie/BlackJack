@@ -47,42 +47,38 @@ namespace BasicBlackJack
 
         void shuffledDeck (int deckCount)
         {
-            for (int i = deckCount; i != 0 ; i++)
-                {
-
-                }
+            for (int i = deckCount; i != 0; i++)   // pulls the variable from readline after asking how many decks to use. 
             {
 
-            }
-
-            foreach (Suits suit in SuitList)
-            {
-
-                foreach (Cards card in cardList)
-
+                foreach (Suits suit in SuitList)
                 {
-                    if (!card.Equals(1))
+
+                    foreach (Cards card in cardList)
+
                     {
-                        DeckUsed.AddCardToDeck(new Card { Name = card, Suit = suit, flag = true, isAce = false });
-                        Console.WriteLine(card.ToString() + suit.ToString());
+                        if (!card.Equals(1))    // puts the ace flag on the four specific ace cards for ease of use when doing math for Ace[1 or 11]
+                        {
+                            DeckUsed.AddCardToDeck(new Card { Name = card, Suit = suit, flag = true, isAce = false });
+                            Console.WriteLine(card.ToString() + suit.ToString());
 
-                        continue;
+                            continue;
 
 
 
+                        }
+                        if (card.Equals(1))
+                        {
+                            DeckUsed.AddCardToDeck(new Card { Name = card, Suit = suit, flag = true, isAce = true });
+                            continue;
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Something went wrong generating this deck");
+                        }
                     }
-                    if (card.Equals(1))
-                    {
-                        DeckUsed.AddCardToDeck(new Card { Name = card, Suit = suit, flag = true, isAce = true });
-                        continue;
 
-                    }
-                    else
-                    {
-                        Console.WriteLine("Something went wrong generating this deck");
-                    }
                 }
-
             }
 
 
