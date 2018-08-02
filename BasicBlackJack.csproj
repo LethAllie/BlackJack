@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Card.cs" />
     <Compile Include="DeckContainer.cs" />
+    <Compile Include="DeckCountInput.cs" />
     <Compile Include="GenerateDeck.cs" />
     <Compile Include="..\..\BBJWIP\Program.cs">
       <Link>Program.cs</Link>

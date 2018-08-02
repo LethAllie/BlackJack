@@ -1,18 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+
 
 namespace BasicBlackJack
 {
-    class Card
+    struct Card
     {
         public Enum Name { get; set; }
         public Enum Suit { get; set; }
         public int Value { get; set; }
-        public bool flag { get; set; }
-        public bool isAce { get; set; }
+        public bool Flag { get; set; }
+        public bool IsAce { get; set; }
     }
-    //Contains the values the card holds
+    // Contains the values the cards use. 
+
 }

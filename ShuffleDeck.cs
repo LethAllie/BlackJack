@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BasicBlackJack
 {
-    static class ShuffleDeck
+    static class DeckManipulationExtensions
     {
         public static void Shuffle<T>(this IList<T> list)
         {
@@ -21,8 +21,6 @@ namespace BasicBlackJack
                 list[n] = value;
             }
         }
-
-
         // Extension method used to shuffle the deck. Why an extension method? Because I haven't used them much and wanted to. 
     }
 }

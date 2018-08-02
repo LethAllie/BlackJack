@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BasicBlackJack
 {
@@ -16,25 +14,13 @@ namespace BasicBlackJack
 
         public List<Card> DeckList { get; private set; }
 
-        public void CheatingCardList()
-        {
-            Console.WriteLine("Remaining Cards");
 
-            foreach (var card in DeckList)
-            {
-                Console.WriteLine(card.Name + " " + card.Suit);
-            }
-
-            // TODO make this work
-
-
-        }
         public void AddCardToDeck(Card card)
         {
             DeckList.Add(card);
         }
 
-        // Used in generating the card
+        // Used to add the generated card to the deck list used by gameloop.
 
 
     }

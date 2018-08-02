@@ -10,7 +10,7 @@ namespace BasicBlackJack
     {
         public GenerateDeck(int deckCount)
         {
-            
+
             DeckUsed = new DeckContainer();
             shuffledDeck(deckCount);
             DeckUsed.DeckList.Shuffle();
@@ -25,7 +25,7 @@ namespace BasicBlackJack
             Suits.Clubs,
             Suits.Spades
         };
-        enum Cards { Ace = 1, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King }
+        enum Cards { Ace = 1, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack = 10, Queen = 10, King = 10}
         List<Cards> cardList = new List<Cards>
         {
             Cards.Ace,
@@ -44,48 +44,34 @@ namespace BasicBlackJack
         };
 
         //Generates the  enums for cards and suits. NOTE: Jack/QUeen/King values will not add correctly. Keep in mind later.
-
-        void shuffledDeck (int deckCount)
+        void shuffledDeck(int deckCount)
         {
-            for (int i = deckCount; i != 0; i++)   // pulls the variable from readline after asking how many decks to use. 
+            for (int i = deckCount; i != 0; i--)   // pulls the variable from readline after asking how many decks to use. 
             {
-
                 foreach (Suits suit in SuitList)
                 {
-
                     foreach (Cards card in cardList)
 
                     {
                         if (!card.Equals(1))    // puts the ace flag on the four specific ace cards for ease of use when doing math for Ace[1 or 11]
                         {
-                            DeckUsed.AddCardToDeck(new Card { Name = card, Suit = suit, flag = true, isAce = false });
-                            Console.WriteLine(card.ToString() + suit.ToString());
-
+                            DeckUsed.AddCardToDeck(new Card { Name = card, Value = (int)card, Suit = suit, Flag = true, IsAce = false });
                             continue;
-
-
-
                         }
                         if (card.Equals(1))
                         {
-                            DeckUsed.AddCardToDeck(new Card { Name = card, Suit = suit, flag = true, isAce = true });
+                            DeckUsed.AddCardToDeck(new Card { Name = card, Suit = suit, Flag = true, IsAce = true });
                             continue;
-
                         }
                         else
                         {
                             Console.WriteLine("Something went wrong generating this deck");
                         }
                     }
-
                 }
             }
-
-
         }
         // Creates a deck by cycling through each suit and generating the cards for it. Adds each card to a list of objects of cards.
-
-
         public DeckContainer DeckUsed { get; private set; }
     }
 }
